@@ -1,4 +1,6 @@
-
+Project setup instructions.
+Public URL of your project.
+Provide a project-specific username and password if we need to access your dashboard.
 ## CI/CD Workflow
 
 1. **Trigger:** On every push or pull request to main branch.

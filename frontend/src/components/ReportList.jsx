@@ -29,7 +29,7 @@ const ReportList = ({ reports, setReports, setEditingReport }) => {
           <div className="mt-2">
             <button
               onClick={() => setEditingReport(report)}
-              className="mr-2 bg-yellow-500 text-white px-4 py-2 rounded"
+              className="mr-2 bg-green-500 text-white px-4 py-2 rounded"
             >
               Edit
             </button>

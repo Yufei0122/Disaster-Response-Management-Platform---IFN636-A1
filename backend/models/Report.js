@@ -2,13 +2,12 @@
 const mongoose = require('mongoose');
 
 const reportSchema = new mongoose.Schema({
-    reportId:{type:String,required:true,unique:true},
-    name: { type: String, required: true},
-    email: { type: String, required: true},
+    userId:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},
     title: { type: String, required: true },
-    context: { type: String },
+    description: { type: String },
     date:{type:Date,required:true},
     address: { type: String,required:true },
+    submittime:{type:Date,default:Date.now,required:true},
 });
 
 module.exports = mongoose.model('Report', reportSchema);

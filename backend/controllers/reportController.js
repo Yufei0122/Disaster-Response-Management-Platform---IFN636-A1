@@ -6,7 +6,7 @@ try{
 
     const reports = await Report.find({userId:req.user.id});
 
-    res.json(tasks);
+    res.json(reports);
 }catch(error){
 
 res.status(500).json({message:error.message});
@@ -15,25 +15,26 @@ res.status(500).json({message:error.message});
 };
 
 const addReport = async(req,res)=>{
-const{title,description,deadline} = req.body;
+const{title,date,address,description} = req.body;
 try{
-    const report = await Report.create({userId:req.user.id,title,description,deadline});
+    const report = await Report.create({userId:req.user.id,title,description,date,address});
     res.status(201).json(report);
+
 }catch(error){
     res.status(500).json({message:error.message})
 }
 };
 
 const updateReport = async(req,res)=>{
-    const{title,description,completed,deadline} = req.body;
+    const{title,description,address,date} = req.body;
     try{
         const report = await Report.findById(req.params.id);
         if(!report)return res.status(404),json({message:'Report not found'});
 
         report.title = title||report.title;
-        report.context = description||report.context;
-        report.completed = completed??report.completed;
-        report.deadline = deadline||report.deadline;
+        report.description = description||report.description;
+        report.address = address||report.address;
+        report.date = date||report.date;
 
         const updatedReport = await report.save();
         //res.json(updateReport);

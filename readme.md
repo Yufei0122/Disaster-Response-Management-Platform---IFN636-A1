@@ -29,7 +29,7 @@ run the commond to root in backend folder:cd backend
 run the commond to start the app: npm start  
 
 **Public URL:**  
-Disaster Response Management Platform ：http://3.27.218.248/ 
+Disaster Response Management Platform ：http://3.27.218.248/   
 **Provide a project-specific username and password if we need to access your dashboard.**  
 Email:admin@admin.com  
 Password:addmin  

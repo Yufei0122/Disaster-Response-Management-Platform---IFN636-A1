@@ -28,17 +28,18 @@ PORT=5001
 run the commond to root in backend folder:cd backend  
 run the commond to start the app: npm start  
 
-**Public URL:**
-Disaster Response Management Platform
-**Provide a project-specific username and password if we need to access your dashboard.**
-Email:admin@admin.com
-Password:addmin
-Or just register a new account.
+**Public URL:**  
+Disaster Response Management Platform ：http://3.27.218.248/ 
+**Provide a project-specific username and password if we need to access your dashboard.**  
+Email:admin@admin.com  
+Password:addmin  
+Or just register a new account.  
 ## CI/CD Workflow
 
 1. **Trigger:** On every push or pull request to main branch.
 2. **Testing:** Runs automated tests for backend and frontend.
 3. **Backend Deployment:** Deployed to QUT EC2 instance using SSH.
-4. **Frontend Deployment:** Built and deployed to AWS (EC2/S3) using GitHub Actions.
-5. **Environment Variables:** Stored in GitHub Secrets (EC2_IP, SSH_KEY, etc.)
-6. **Commands:** Backend uses `npm install && pm2 restart server.js`; frontend uses `npm install && npm run build`.
+4. **Frontend Deployment:** Built and deployed to AWS (EC2/S2) using GitHub Actions.
+5. **Environment Variables:** Stored in GitHub Secrets (MONGO_URI, JWT_SECRET,PORT，PROD )
+6. **Commands:** Mainly follows W3 Tutorial Instruction Part 4(Backend uses `npm install && pm2 start “npm run start” --name=“backend” `; frontend uses `npm install && pm2 serve build/ 3000 --name "Frontend" --spa)
+`.

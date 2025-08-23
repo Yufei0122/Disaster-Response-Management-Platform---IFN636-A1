@@ -10,29 +10,24 @@ Create account in following web tools:
 Step by step procedure:  
 1.clone the code  
 git clone https://github.com/Yufei0122/Disaster-Response-Management-Platform---IFN636-A1.git  
-#enter the code  
+#enter the code folder    
 cd Disaster-Response-Management-Platform---IFN636-A1  
 2.dependencies install  
-Frontend:  
-cd frontend  
-npm install  
-Backend:  
-cd backend  
-npm install  
+Frontend: **cd frontend** then **npm install**  
+Backend:  **cd backend** then **npm install**    
 3.setup .env file  
 create an .env file in the backend floder,paste following codes:  
 MONGO_URI=mongodb+srv://hyf0122:hyf545046263@ifn636tutorial.dx3nri7.mongodb.net/IFN636A1?retryWrites=true&w=majority&appName=IFN636Tutorial  
 JWT_SECRET=2J8zqkP7VN6bxzg+Wy7DQZsd3Yx8mF3Bl0kch6HYtFs=  
 PORT=5001  
 4.start app  
-run the commond to root in backend folder:cd backend  
-run the commond to start the app: npm start  
+run the commond to root in backend folder:**cd backend**  
+run the commond to start the app: **npm start** 
 
 **Public URL:**  
 Disaster Response Management Platform ：http://3.27.218.248/   
 **Provide a project-specific username and password if we need to access your dashboard.**  
-Email:admin@admin.com  
-Password:addmin  
+Email:admin@admin.com Password:addmin   
 Or just register a new account.  
 ## CI/CD Workflow
 
